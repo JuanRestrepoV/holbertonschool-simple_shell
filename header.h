@@ -7,6 +7,8 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+extern char **environ;
+int print_env(void);
 char **splitString(char *str, int *num_words);
 
 #endif
