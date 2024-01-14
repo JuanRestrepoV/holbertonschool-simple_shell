@@ -12,7 +12,7 @@ int main(void)
 
 	while (1)
 	{
-		buff = prompt();
+		buff = read_prompt();
 		
 		if (strcmp(buff, "exit") == 0 || strcmp(buff, "quit") == 0)
 		{
