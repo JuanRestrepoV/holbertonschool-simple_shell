@@ -20,6 +20,6 @@ char read_prompt(void)
 		free(buff);
 		exit(0);
 	}
-	
+	buff[strcspn(buffer, "\n")] = '\0';
 	return (buff);
 }
