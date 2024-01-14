@@ -13,4 +13,6 @@ char **split_string(char *str, int *num_words);
 int exec_command (char **word_list);
 int print_env(void);
 char *get_env(char* name);
+char *path_env(char *command);
+
 #endif
