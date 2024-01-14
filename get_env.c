@@ -9,6 +9,9 @@
 char *get_env(char* name)
 {
 	char **environ_copy;
+	size_t len;
+	
+	len = strlen(name);
 
 	if (name == NULL || environ == NULL)
 	{
@@ -19,10 +22,11 @@ char *get_env(char* name)
 
 	while (*environ_copy != NULL)
 	{
-		if (strncmp(*environ_copy, name) == 0)
+		if (strncmp(*environ_copy, name, len) == 0)
 		{
 			return (*env_var);
 		}
+		environ_copy++;
 	}
 	return (NULL);
 }
