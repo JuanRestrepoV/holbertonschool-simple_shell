@@ -1,8 +1,8 @@
 #include "header.h"
 /**
-* splitString - Function to split a string into an array of words.
+* split_string - Function to split a string into an array of words.
 * @str: Input string to be split.
-* @numWords: Pointer to store the number of words.
+* @num_words: Pointer to store the number of words.
 *
 * Return: Array of words.
 */

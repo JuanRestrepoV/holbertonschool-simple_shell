@@ -8,6 +8,9 @@
 #include <sys/wait.h>
 
 extern char **environ;
+char read_prompt(void);
+char **split_string(char *str, int *num_words);
+int exec_command (char **word_list);
 int print_env(void);
-char **splitString(char *str, int *num_words); 
+char *get_env(char* name);
 #endif

@@ -1,6 +1,12 @@
 #include "header.h"
 /**
-* exercise fork, wait and execve
+* exec_command - Executes the command found in the word_list obtain from
+* split_string function.
+* 
+* @word_list: Double pointer to an array of words where the first word
+* represents the command for execution.
+*
+* Return: 0 if succes.
 */
 int exec_command (char **word_list)
 {
