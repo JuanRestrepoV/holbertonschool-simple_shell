@@ -8,8 +8,6 @@ int exec_command (char **word_list)
 	pid_t child_pid;
 	int status, i;
 
-	for (i = 0; i < 5; ++i)
-	{
 		child_pid = fork();
 		
 		if (child_pid == -1)
