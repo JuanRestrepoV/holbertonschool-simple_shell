@@ -10,21 +10,21 @@ char *get_env(char* name)
 {
 	char **environ_copy;
 	size_t len;
-	
-	len = strlen(name);
 
 	if (name == NULL || environ == NULL)
 	{
 		return (NULL);
 	}
-	
+
+	len = strlen(name);
+
 	environ_copy = environ;
 
 	while (*environ_copy != NULL)
 	{
-		if (strncmp(*environ_copy, name, len) == 0)
+		if (strncmp(*environ_copy, name, len) == 0 && (*env_var)[len] == '=')
 		{
-			return (*env_var);
+			return (*env_var + len + 1);
 		}
 		environ_copy++;
 	}
