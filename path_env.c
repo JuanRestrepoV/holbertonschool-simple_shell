@@ -43,5 +43,6 @@ char *path_env(char *command)
 		free(route);
 		directory = strtok(NULL, ":");
 	}
+	free(path_copy);
 	return(command);
 }
