@@ -2,7 +2,7 @@
 /**
 * exercise fork, wait and execve
 */
-int main (void)
+int exec_command (char **word_list)
 {
 	struct stat st;
 	pid_t child_pid;

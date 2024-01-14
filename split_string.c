@@ -6,23 +6,25 @@
 *
 * Return: Array of words.
 */
-char **splitString(char *str, int *num_words)
+char **split_string(char *str, int *num_words)
 {
 	char* word, str_copy;
-	char** str_token;
+	char** word_list;
 
 	str_copy = strdup(str);
+
 	word = strtok(str_copy, " \n");
+
 	*num_words = 0;
 
 	while (word != NULL)
 	{
-		str_token[num_words] = strdup(word);
+		word_list[num_words] = strdup(word);
 		num_words++;
 		word = strtok(NULL, " \n")
 	}
-	str_token[num_words] = NULL;
+	word_list[num_words] = NULL;
 	free(str_copy);
 	
-	return (str_token);
+	return (word_list);
 }

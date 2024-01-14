@@ -9,6 +9,5 @@
 
 extern char **environ;
 int print_env(void);
-char **splitString(char *str, int *num_words);
-
+char **splitString(char *str, int *num_words); 
 #endif
