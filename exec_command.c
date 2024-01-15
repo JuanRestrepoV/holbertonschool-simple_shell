@@ -13,6 +13,7 @@ int exec_command (char **word_list)
 	struct stat st;
 	pid_t chd_process;
 	char *command;
+	int process_stat;
 
 	command = path_env(word_list[0]);
 
@@ -30,7 +31,11 @@ int exec_command (char **word_list)
 	}
 	if (chd_process > 0)
 	{
-		wait();
+		waitpid(chd_process, &process_stat, 0);
+		if (process_stat != 0)
+		{
+			return (1);
+		}
 		return (0);
 	}
 	if (chd_process == 0)

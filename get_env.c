@@ -6,7 +6,7 @@
 *
 * Return: Pointer to the value of the environment variable.
 */
-char *get_env(char* name)
+char *get_env(const char* name)
 {
 	char **environ_copy;
 	size_t len;
