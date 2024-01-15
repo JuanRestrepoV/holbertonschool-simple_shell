@@ -16,12 +16,6 @@ int exec_command (char **word_list)
 
 		command = path_env(*word_list);
 
-		if (child_pid == -1)
-		{
-			perror("Error creating child process");
-			return(1);
-		}
-	
 		if (child_pid == 0)
 		{
 			char *command = "/bin/ls";
