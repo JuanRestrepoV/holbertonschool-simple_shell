@@ -9,9 +9,15 @@ int main(void)
 	int word_count;
 	char *buff;
 	char **word_list;
+	int i;
 
 	while (1)
 	{
+		if (isatty(STDIN_FILENO) == 1)
+		{
+			printf("Shell:# ");
+		}
+		
 		buff = read_prompt();
 		
 		if (strcmp(buff, "exit") == 0 || strcmp(buff, "quit") == 0)
@@ -25,6 +31,13 @@ int main(void)
 		{
 			exec_command(word_list);
 		}
+		for (i = 0; word_list[i] != NULL; i++)
+		{
+			free(word_list[i]);
+			word_list[i] = NULL;
+		}
+		free(word_list);
+		free(buff);
 	}
 	return(0);
 }

@@ -23,6 +23,12 @@ int exec_command (char **word_list)
 		return(127);
 	}
 
+	if (command != word_list[0])
+	{
+		free(word_list[0]);
+		word_list[0] = command;
+	}
+
 	chd_process = fork();
 
 	if (chd_process < 0)
