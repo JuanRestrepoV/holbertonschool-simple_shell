@@ -1,6 +1,6 @@
 #include "header.h"
 /**
-* split_string - Function to split a string into an array of words.  
+* split_string - Function to split a string into an array of words.
 * @str: Input string to be split.
 * @num_words: Pointer to store the number of words.
 *
@@ -12,7 +12,7 @@ char **split_string(const char *str, int *num_words)
 	char **word_list;
 
 	str_copy = strdup(str);
-	word_list = malloc(MAX_WORDS * sizeof(char*));
+	word_list = malloc(MAX_WORDS * sizeof(char *));
 	if (word_list == NULL)
 	{
 		free(str_copy);
@@ -32,6 +32,5 @@ char **split_string(const char *str, int *num_words)
 	}
 	word_list[*num_words] = NULL;
 	free(str_copy);
-	
 	return (word_list);
 }

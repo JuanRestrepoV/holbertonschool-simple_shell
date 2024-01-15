@@ -16,10 +16,10 @@ char *path_env(char *command)
 	{
 		if (access(command, X_OK) == 0)
 		{
-			return(command);
+			return (command);
 		}
 		else
-			return(NULL);
+			return (NULL);
 	}
 	path_copy = strdup(path);
 	route = NULL;
@@ -41,7 +41,7 @@ char *path_env(char *command)
 		if (access(route, X_OK) == 0)
 		{
 			free(path_copy);
-			return(route);
+			return (route);
 		}
 		free(route);
 		directory = strtok(NULL, ":");

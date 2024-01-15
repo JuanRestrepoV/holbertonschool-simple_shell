@@ -6,10 +6,8 @@
 */
 int main(void)
 {
-	int word_count;
-	char *buff;
-	char **word_list;
-	int i;
+	char *buff, **word_list;
+	int i, word_count;
 	int status = 0;
 
 	while (1)
@@ -18,9 +16,7 @@ int main(void)
 		{
 			printf("Shell:# ");
 		}
-		
 		buff = read_prompt();
-		
 		if (strcmp(buff, "exit") == 0 || strcmp(buff, "quit") == 0)
 		{
 			free(buff);
@@ -31,9 +27,8 @@ int main(void)
 			print_env();
 			free(buff);
 			return (0);
-		}			
+		}
 		word_list = split_string(buff, &word_count);
-
 		if (word_count > 0)
 		{
 			status = exec_command(word_list);
@@ -46,5 +41,5 @@ int main(void)
 		free(word_list);
 		free(buff);
 	}
-	return(status);
+	return (status);
 }
