@@ -18,6 +18,8 @@ char *path_env(char *command)
 		{
 			return(command);
 		}
+		else
+			return(NULL);
 	}
 	path_copy = strdup(path);
 	route = NULL;
