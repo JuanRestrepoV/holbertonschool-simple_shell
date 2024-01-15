@@ -17,10 +17,10 @@ char *path_env(char *command)
 	if (access(command, X_OK) == 0)
 	{
 		free(path_copy);
-		return(command);
+		return (command);
 	}
 	if (path_copy == NULL)
-		return(NULL);
+		return (NULL);
 
 	directory = strtok(path_copy, ":");
 	while (directory != NULL)
@@ -32,7 +32,7 @@ char *path_env(char *command)
 		if (route == NULL)
 		{
 			free(path_copy);
-			return(route);
+			return (route);
 		}
 		sprintf(route, "%s/%s", directory, command);
 		if (acces(route, X_OK) == 0)
@@ -44,5 +44,5 @@ char *path_env(char *command)
 		directory = strtok(NULL, ":");
 	}
 	free(path_copy);
-	return(command);
+	return (command);
 }
