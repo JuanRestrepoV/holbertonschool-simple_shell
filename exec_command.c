@@ -12,10 +12,10 @@ int exec_command (char **word_list)
 {
 	struct stat st;
 	pid_t child_pid;
-	int status, i;
+	char *command;
 
-		child_pid = fork();
-		
+		command = path_env(*word_list);
+
 		if (child_pid == -1)
 		{
 			perror("Error creating child process");
