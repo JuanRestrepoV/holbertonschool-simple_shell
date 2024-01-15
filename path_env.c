@@ -9,7 +9,7 @@
 char *path_env(char *command)
 {
 	char *path, *path_copy, *directory, *route;
-	
+
 	path = get_env_value("PATH");
 	path_copy = strdup(path);
 	route = NULL;
@@ -21,8 +21,8 @@ char *path_env(char *command)
 	}
 	if (path_copy == NULL)
 		return(NULL);
-	
-	directory = strtok(pat_copy, ":");
+
+	directory = strtok(path_copy, ":");
 	while (directory != NULL)
 	{
 		size_t route_len;
@@ -32,13 +32,13 @@ char *path_env(char *command)
 		if (route == NULL)
 		{
 			free(path_copy);
-			return(NULL);
+			return(route);
 		}
 		sprintf(route, "%s/%s", directory, command);
 		if (acces(route, X_OK) == 0)
 		{
 			free(path_copy);
-			return(route);
+			return (route);
 		}
 		free(route);
 		directory = strtok(NULL, ":");
