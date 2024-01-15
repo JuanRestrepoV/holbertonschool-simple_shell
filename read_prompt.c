@@ -7,7 +7,7 @@
 *
 * Return: A pointer to a buffer whit the line already read.
 */
-char read_prompt(void)
+char *read_prompt(void)
 {
 	char *buff = NULL;
 	size_t buff_len = 0;

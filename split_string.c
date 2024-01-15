@@ -23,7 +23,7 @@ char **split_string(char *str, int *num_words)
 		(*num_words)++;
 		word = strtok(NULL, " \n");
 	}
-	word_list[num_words] = NULL;
+	word_list[*num_words] = NULL;
 	free(str_copy);
 	
 	return (word_list);
