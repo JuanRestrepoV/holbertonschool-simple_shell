@@ -11,12 +11,18 @@ char *path_env(char *command)
 	char *path, *path_copy, *directory, *route;
 
 	path = get_env("PATH");
+
+	if (path == NULL)
+	{
+		if (access(command, X_OK) == 0)
+		{
+			return(command);
+		}
+	}
 	path_copy = strdup(path);
 	route = NULL;
-
 	if (path_copy == NULL)
 		return (NULL);
-
 	directory = strtok(path_copy, ":");
 	while (directory != NULL)
 	{
