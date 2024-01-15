@@ -11,7 +11,7 @@
 int exec_command (char **word_list)
 {
 	struct stat st;
-	pid_t child_pid;
+	pid_t chd_process;
 	char *command;
 
 	command = path_env(*word_list);
@@ -22,41 +22,20 @@ int exec_command (char **word_list)
 		return(127);
 	}
 
-	child_pid = fork();
+	chd_process = fork();
 
-	if (process == -1)
+	if (chd_process == -1)
 	{
 		return (1);
 	}
 
-	if (process != 0)
-	
-
-
-	if (command != wor
-		if (child_pid == 0)
-		{
-			char *command = "/bin/ls";
-			char *args[] = {command, "-l", "/tmp", NULL};
-
-			if (stat(command, &st) != 0)
-			{
-				printf("%s Command not found\n", command);
-				free(command);
-				return(1);
-			}
-
-			if (execve(command, args, NULL) == -1)
-			{
-				perror("Error executing command");
-				return 1;
-			}
-		}
-	
-		else
-		{
-			wait(&status);
-		}
+	if (chd_process != 0)
+	{
+		wait		
+	}
+	if (execve(command, word_list, environ) == -1)
+	{
+		return (1);
 	}
 	return (0);
 }
