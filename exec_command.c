@@ -14,8 +14,26 @@ int exec_command (char **word_list)
 	pid_t child_pid;
 	char *command;
 
-		command = path_env(*word_list);
+	command = path_env(*word_list);
 
+	if (command == NULL || stat(command, &st) != 0)
+	{
+		fprintf(stderr, "./hsh: 1: %s: not found\n", wordList[0]);
+		return(127);
+	}
+
+	child_pid = fork();
+
+	if (process == -1)
+	{
+		return (1);
+	}
+
+	if (process != 0)
+	
+
+
+	if (command != wor
 		if (child_pid == 0)
 		{
 			char *command = "/bin/ls";
