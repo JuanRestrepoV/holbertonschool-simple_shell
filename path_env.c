@@ -10,7 +10,7 @@ char *path_env(char *command)
 {
 	char *path, *path_copy, *directory, *route;
 
-	path = get_env_value("PATH");
+	path = get_env("PATH");
 	path_copy = strdup(path);
 	route = NULL;
 
@@ -30,7 +30,7 @@ char *path_env(char *command)
 			return (route);
 		}
 		sprintf(route, "%s/%s", directory, command);
-		if (acces(route, X_OK) == 0)
+		if (access(route, X_OK) == 0)
 		{
 			free(path_copy);
 			return (route);

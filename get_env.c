@@ -22,9 +22,9 @@ char *get_env(char* name)
 
 	while (*environ_copy != NULL)
 	{
-		if (strncmp(*environ_copy, name, len) == 0 && (*env_var)[len] == '=')
+		if (strncmp(*environ_copy, name, len) == 0 && (*environ_copy)[len] == '=')
 		{
-			return (*env_var + len + 1);
+			return (*environ_copy + len + 1);
 		}
 		environ_copy++;
 	}

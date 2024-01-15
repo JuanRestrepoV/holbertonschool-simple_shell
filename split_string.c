@@ -21,7 +21,7 @@ char **split_string(char *str, int *num_words)
 	{
 		word_list[*num_words] = strdup(word);
 		(*num_words)++;
-		word = strtok(NULL, " \n")
+		word = strtok(NULL, " \n");
 	}
 	word_list[num_words] = NULL;
 	free(str_copy);
