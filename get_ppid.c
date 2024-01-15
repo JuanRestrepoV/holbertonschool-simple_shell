@@ -5,7 +5,7 @@
 *
 * Return: Always 0.
 */
-int main(void)
+int get_ppid(void)
 {
 	pid_t parent_pid;
 

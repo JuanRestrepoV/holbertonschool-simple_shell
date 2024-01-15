@@ -8,7 +8,7 @@
 */
 char **split_string(const char *str, int *num_words)
 {
-	char *word, str_copy;
+	char *word, *str_copy;
 	char **word_list;
 
 	str_copy = strdup(str);
