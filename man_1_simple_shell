@@ -1,0 +1,22 @@
+# NAME
+hsh - simple shell program.
+
+# SYNOPSIS
+**hsh**
+
+# DESCRIPTION
+**hsh** is a simple shell program written in C. It provides a basic command-line interface for users to interact with their system.
+
+#COMPILE_PROCESS
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+
+# INTERACTIVE MODE
+When run without arguments, **hsh** enters interactive mode, allowing the user to enter commands one at a time. The prompt "Shell:# " will be displayed.
+
+# EXAMPLES
+1. Run a command: ls
+2. Change directory: cd /path/to/directory
+3. Exit the shell: exit
+
+# AUTHOR
+Juan Pablo Restrepo Vidal <7844@holbertonstudents.com>
