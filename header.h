@@ -13,7 +13,7 @@ extern char **environ;
 char *read_prompt(void);
 char **split_string(const char *str, int *num_words);
 int exec_command (char **word_list);
-int print_env(void);
+void print_env(void);
 char *get_env(const char* name);
 char *path_env(char *command);
 

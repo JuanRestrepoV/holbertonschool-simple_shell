@@ -44,7 +44,7 @@ int exec_command (char **word_list)
 		}
 		return (0);
 	}
-		if (execve(command, word_list, environ) == -1)
+		if (execve(command, word_list, NULL) == -1)
 		{
 			return (1);
 		}

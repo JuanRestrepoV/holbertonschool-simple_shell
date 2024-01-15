@@ -5,7 +5,7 @@
 *
 * Description: prints the environment variables.
 */
-int print_env(void)
+void print_env(void)
 {
 	int i;
 	char **env = environ;
@@ -14,5 +14,4 @@ int print_env(void)
 	{
 		printf("%s\n", env[i]);
 	}
-	return(0);
 }
