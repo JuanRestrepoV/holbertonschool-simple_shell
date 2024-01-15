@@ -43,4 +43,5 @@ Interactive Mode: Allows users to enter commands interactively.
 Command Execution: Executes commands entered by the user.
 Exit: Allows the user to exit the shell using the "exit" or "quit" commands.
 Environment Variables: Displays environment variables using the "env" or "printenv" command.
-
+## Author
+Juan Pablo Restrepo Vidal
