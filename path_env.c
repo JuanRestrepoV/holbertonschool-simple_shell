@@ -14,11 +14,6 @@ char *path_env(char *command)
 	path_copy = strdup(path);
 	route = NULL;
 
-	if (access(command, X_OK) == 0)
-	{
-		free(path_copy);
-		return (command);
-	}
 	if (path_copy == NULL)
 		return (NULL);
 
