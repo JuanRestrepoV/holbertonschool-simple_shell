@@ -12,7 +12,7 @@ char *path_env(char *command)
 
 	path = get_env("PATH");
 
-	if (path == NULL)
+	if (path == NULL || path[0] == '\0')
 	{
 		if (access(command, X_OK) == 0)
 		{
