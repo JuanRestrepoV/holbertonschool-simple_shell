@@ -35,7 +35,7 @@ int exec_command (char **word_list)
 	{
 		return (1);
 	}
-	if (chd_process != 0)
+	if (chd_process > 0)
 	{
 		waitpid(chd_process, &process_stat, 0);
 		if (process_stat != 0)

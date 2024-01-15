@@ -10,6 +10,7 @@ int main(void)
 	char *buff;
 	char **word_list;
 	int i;
+	int status = 0;
 
 	while (1)
 	{
@@ -29,7 +30,7 @@ int main(void)
 
 		if (word_count > 0)
 		{
-			exec_command(word_list);
+			status = exec_command(word_list);
 		}
 		for (i = 0; word_list[i] != NULL; i++)
 		{
@@ -39,5 +40,5 @@ int main(void)
 		free(word_list);
 		free(buff);
 	}
-	return(0);
+	return(status);
 }

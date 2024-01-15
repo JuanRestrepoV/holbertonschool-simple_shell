@@ -33,7 +33,7 @@ char *path_env(char *command)
 		if (access(route, X_OK) == 0)
 		{
 			free(path_copy);
-			return (route);
+			return(route);
 		}
 		free(route);
 		directory = strtok(NULL, ":");
