@@ -44,12 +44,10 @@ int exec_command (char **word_list)
 		}
 		return (0);
 	}
-	if (chd_process == 0)
-	{
 		if (execve(command, word_list, environ) == -1)
 		{
 			return (1);
 		}
-	}
+	
 	return (0);
 }
