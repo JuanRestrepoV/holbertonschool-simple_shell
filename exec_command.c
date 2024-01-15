@@ -40,7 +40,7 @@ int exec_command (char **word_list)
 		waitpid(chd_process, &process_stat, 0);
 		if (process_stat != 0)
 		{
-			return (1);
+			return (2);
 		}
 		return (0);
 	}
